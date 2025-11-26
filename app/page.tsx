@@ -1,65 +1,134 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
 
-export default function Home() {
+
+export default function Portfolio() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2 text-lg font-medium text-gray-700">
+            <span className="text-xl">𐙚</span>
+            <span>SHARON ZHENG</span>
+          </div>
+          <div className="flex gap-8 text-sm">
+            <a href="/home" className="text-gray-600 hover:text-blue-900 transition-colors">
+              Home
+            </a>
+            <a href="/graphics" className="text-gray-600 hover:text-blue-900 transition-colors">
+              Illos+Graphic
+            </a>
+            <Link href="/about" className="text-gray-600 hover:text-blue-900 transition-colors">
+              About
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      {/* Intro Section */}
+      <section className="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-5xl leading-tight mb-6 font-bold">
+            Sharon Zheng
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <h2 className="text-2xl leading-relaxed mb-6 font-medium">
+            is a coder & designer, blending artistry with clean code to build interactive digital experiences.
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Currently based in NY  
           </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="text-gray-500 font-semibold tracking-widest mb-8 pb-2 border-b border-gray-200">
+          FEATURED WORKS
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Project 1 - Research Link */}
+
+          <div className="group cursor-pointer">
+            <div className="bg-gradient-to-br from-cyan-200 to-cyan-100 rounded-lg overflow-hidden mb-4 h-72 flex items-center justify-center p-8 hover:shadow-xl transition-shadow">
+
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">
+              Research Link
+              </h3>
+            <p className="text-gray-700 mb-3">
+              Designing a platform for students to find research labs on campus.
+            </p>
+            <p className="text-sm text-gray-500 italic">
+              User Research / Prototyping / Human-Computer Interaction Design
+            </p>
+          </div>
+
+          {/* Project 2 - Scute Shoot */}
+          <div className="group cursor-pointer">
+             <img 
+                src="/images/scute.png"
+                alt="scute" 
+                className="h-72 object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
+              />
+            <h3 className="text-2xl font-semibold mb-2">Scute Shoot</h3>
+            <p className="text-gray-700 mb-3">
+              Programmed in C# and designed game objects for a fast-paced, accuracy game.
+            </p>
+            <p className="text-sm text-gray-500 italic">
+              Programmer / Game Development / Unity Engine
+            </p>
+          </div>
+
+          {/* Project 3 - Gone Astray */}
+
+          <div className="group cursor-pointer">
+              <img 
+                src="/images/goneastray.png"
+                alt="astray" 
+                className="h-72 object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
+              />
+            <h3 className="text-2xl font-semibold mb-2">
+              Gone Astray
+              </h3>
+            <p className="text-gray-700 mb-3">
+              Programmed in Java to implement game screens and dynamic assets.
+            </p>
+            <p className="text-sm text-gray-500 italic">
+              Programmer / Gravity Platformer / Game Development 
+            </p>
+          </div>
+
+          {/* Project 4 - CorgsStudio */}
+          <div className="group cursor-pointer">
+
+            <div className="rounded-lg overflow-hidden mb-4 h-72 flex items-center justify-center p-8 hover:shadow-xl transition-shadow">
+              <img 
+                  src="/images/corg.png"
+                  alt="corgsstudio" 
+                  className=" object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
+                />
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">CorgsStudio</h3>
+            <p className="text-gray-700 mb-3">
+              Designed and managed an Etsy shop specializing in stationary items.
+            </p>
+            <p className="text-sm text-gray-500 italic">
+              Entrepreneur / Product Design / Social Media
+            </p>
+          </div>
+
         </div>
-      </main>
+      </section>
+
+      {/* Footer */}
+      <footer className="max-w-7xl mx-auto px-6 py-12 mt-20 border-t border-gray-200">
+        <div className="text-center text-sm text-gray-500">
+          <p>made w/ next.js in 2025</p>
+        </div>
+      </footer>
     </div>
   );
 }
