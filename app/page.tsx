@@ -67,12 +67,15 @@ export default function Portfolio() {
           </div>
 
           {/* Project 2 - Scute Shoot */}
-          <div className="group cursor-pointer">
+          <Link href="/scute" className="group cursor-pointer">
+
+           <div className="scale-90 overflow-hidden rounded-2xl mb-4 transition-all duration-300 hover:scale-95 hover:shadow-2xl">
+
              <img 
                 src="/images/scute.png"
                 alt="scute" 
-                className="h-72 object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
               />
+            </div>
             <h3 className="text-2xl font-semibold mb-2">Scute Shoot</h3>
             <p className="text-gray-700 mb-3">
               Programmed in C# and designed game objects for a fast-paced, accuracy game.
@@ -80,16 +83,19 @@ export default function Portfolio() {
             <p className="text-sm text-gray-500 italic">
               Programmer / Game Development / Unity Engine
             </p>
-          </div>
+          </Link>
 
           {/* Project 3 - Gone Astray */}
 
-          <div className="group cursor-pointer">
+          <Link href="/goneastray" className="group cursor-pointer">
+           <div className="scale-90 overflow-hidden rounded-2xl mb-4 transition-all duration-300 hover:scale-95 hover:shadow-2xl">
+
               <img 
                 src="/images/goneastray.png"
                 alt="astray" 
-                className="h-72 object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
               />
+
+            </div>
             <h3 className="text-2xl font-semibold mb-2">
               Gone Astray
               </h3>
@@ -99,17 +105,15 @@ export default function Portfolio() {
             <p className="text-sm text-gray-500 italic">
               Programmer / Gravity Platformer / Game Development 
             </p>
-          </div>
+          </Link>
 
-          {/* Project 4 - CorgsStudio */}
-          <div className="group cursor-pointer">
-
-            <div className="rounded-lg overflow-hidden mb-4 h-72 flex items-center justify-center p-8 hover:shadow-xl transition-shadow">
+         {/* Project 4 - CorgsStudio */}
+          <Link href="/corgsstudio" className="block group cursor-pointer">
+            <div className="scale-90 overflow-hidden rounded-2xl mb-4 transition-all duration-300 hover:scale-95 hover:shadow-2xl">
               <img 
-                  src="/images/corg.png"
-                  alt="corgsstudio" 
-                  className=" object-cover rounded-2xl mb-4 over:shadow-xl transition-shadow"
-                />
+                src="/images/corgs.png"
+                alt="corgsstudio" 
+              />
             </div>
             <h3 className="text-2xl font-semibold mb-2">CorgsStudio</h3>
             <p className="text-gray-700 mb-3">
@@ -118,7 +122,7 @@ export default function Portfolio() {
             <p className="text-sm text-gray-500 italic">
               Entrepreneur / Product Design / Social Media
             </p>
-          </div>
+          </Link>
 
         </div>
       </section>
