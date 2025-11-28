@@ -5,19 +5,24 @@ import Navigation from '@/components/Navigation';
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation>
-        
-      </Navigation>
+  <Navigation>
+  
+        </Navigation>
 
       {/* Intro Section */}
-      <section className="max-w-7xl mx-auto px-6 pt-32 pb-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-5xl mx-auto px-8 pt-32 pb-20">
+        <div className="items-center">
         <div>
-          <h1 className="text-5xl leading-tight mb-6 font-bold">
+          <h1 className="text-5xl leading-tight mb-6 font-semibold">
             Sharon Zheng
           </h1>
+          <h2 className="text-2xl leading-relaxed font-medium">
+            is a coder & designer, blending artistry with clean code 
+            
+          </h2>
+
           <h2 className="text-2xl leading-relaxed mb-6 font-medium">
-            is a coder & designer, blending artistry with clean code to build interactive digital experiences.
+            to build interactive digital experiences.
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
             Currently based in NY  
@@ -27,7 +32,7 @@ export default function Portfolio() {
       </section>
 
       {/* Featured Projects */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-8">
         <h2 className="text-gray-500 font-semibold tracking-widest mb-8 pb-2 border-b border-gray-200">
           FEATURED WORKS
         </h2>
@@ -111,13 +116,12 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-6 py-12 mt-20 border-t border-gray-200">
+      <footer className="max-w-5xl mx-auto px-8 py-12 mt-20 border-t border-gray-200">
         <div className="text-center text-sm text-gray-500">
           <p>made w/ next.js in 2025</p>
         </div>
       </footer>
     </div>
 
-  
   );
 }

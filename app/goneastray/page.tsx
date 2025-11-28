@@ -1,28 +1,42 @@
 import Link from 'next/link';
-
+import Navigation from '@/components/Navigation';
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-lg font-medium text-gray-700">
-            <span className="text-xl">𐙚</span>
-            <span>SHARON ZHENG</span>
-          </div>
-          <div className="flex gap-8 text-sm">
-            <Link href="/home" className="text-gray-600 hover:text-pink-900 transition-colors">
-              Home
-            </Link>
-            <a href="#graphics" className="text-gray-600 hover:text-pink-900 transition-colors">
-              Illos+Graphic
-            </a>
-            <Link href="/about" className="text-gray-600 hover:text-pink-900 transition-colors">
-              About
-            </Link>
-          </div>
+     <Navigation>
+
+     </Navigation>
+
+
+     <section className="max-w-5xl mx-auto px-6 pt-32 pb-20">
+        {/* Banner Image */}
+        <div className="mb-12">
+            <img 
+            src="/images/astraybanner.png" 
+            alt="Gone Astray Banner" 
+            className="w-full rounded-2xl"
+            />
         </div>
-      </nav>
+
+        {/* Main Heading - Centered */}
+        <div className="grid md:grid-cols-2 mb-16">
+            <h2 className="text-4xl mb-6 font-bold">
+            Gone Astray
+            </h2>
+             <p className="leading-relaxed mb-6 font-sm">
+            Drifting in the vast expanse of space, a lone canine astronaut named
+            Laika awakens in the wreckage of their spaceship, thousands of miles from home. 
+            To survive, they must traverse the remnants of the ship to reach the damaged escape pod 
+            in the docking bay on the other side of the ship. With no supplies but a magnetic suit and 
+            their own two legs, they must rely on controlling their distant home world to change the 
+            direction of their gravity within the ship. As they navigate through the increasingly damaged
+            sections, Laika must collect scraps to repair the escape pod and slowly piece together the mystery of the wrecked ship.
+            </p>
+           
+            
+        </div>
+
+        </section>
       </div>
   )
 }
