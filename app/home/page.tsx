@@ -39,20 +39,20 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Project 1 - Research Link */}
 
-          <div className="group cursor-pointer">
-            <div className="bg-gradient-to-br from-cyan-200 to-cyan-100 rounded-lg overflow-hidden mb-4 h-72 flex items-center justify-center p-8 hover:shadow-xl transition-shadow">
-
+          <Link href="/guppy" className="group cursor-pointer block">
+            <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg overflow-hidden mb-4 h-72 flex items-center justify-center p-8 hover:shadow-xl transition-shadow">
+              {/* You can add an image here later */}
             </div>
             <h3 className="text-2xl font-semibold mb-2">
-              Research Link
-              </h3>
+              Guppy
+            </h3>
             <p className="text-gray-700 mb-3">
-              Designing a platform for students to find research labs on campus.
+              Designing a mobile app to energize mornings and promote routine.
             </p>
             <p className="text-sm text-gray-500 italic">
-              User Research / Prototyping / Human-Computer Interaction Design
+              Design-a-thon / 0-1 Prototyping / Figma
             </p>
-          </div>
+            </Link>
 
           {/* Project 2 - Scute Shoot */}
           <Link href="/scute" className="group cursor-pointer">

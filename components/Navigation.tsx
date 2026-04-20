@@ -15,7 +15,7 @@ export default function Navigation() {
             Home
           </Link>
           <Link 
-          href="/resume.pdf" 
+          href="/resume1.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-600 hover:text-gray-900"
